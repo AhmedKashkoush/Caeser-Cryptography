@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class CaeserCipher {
 
     public static void main(String[] args) throws Exception {
-        System.out.print("Enter Plain: ");
         Scanner input = new Scanner(System.in);
         CaeserED c = new CaeserED();
-        c.encrypt(input.nextLine(), 1);
+        System.out.print("Enter Plain: ");
+        String plainT = input.nextLine();
+        System.out.print("Enter Key: ");
+        int key = input.nextInt();
+        c.encrypt(plainT, key);
         System.out.print("Cipher: ");
         System.out.println(c.getCipher());
         c.decrypt();
