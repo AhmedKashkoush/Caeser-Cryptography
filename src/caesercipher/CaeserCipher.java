@@ -8,7 +8,7 @@ public class CaeserCipher {
         System.out.print("Enter Plain: ");
         Scanner input = new Scanner(System.in);
         CaeserED c = new CaeserED();
-        c.encrypt(input.next(), 1);
+        c.encrypt(input.nextLine(), 1);
         System.out.print("Cipher: ");
         System.out.println(c.getCipher());
         c.decrypt();
